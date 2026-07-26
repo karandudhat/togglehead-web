@@ -23,7 +23,7 @@
   max-width: 1454px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   padding-bottom: 70px;
   position: relative;
@@ -64,6 +64,17 @@
 .footer-list.with-icons i {
   margin-top: 4px;
   color: #bbb;
+}
+
+.footer-description {
+  color: #bbb;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.footer-brand-col {
+  max-width: 320px;
 }
 
 .social-icons {
@@ -120,72 +131,43 @@
 
   .footer-container {
     grid-template-columns: 1fr;
-    text-align: center;
+    text-align: left;
     gap: 26px;
     padding-bottom: 48px;
   }
   
   .footer-col {
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;   /* was center */
+    text-align: left;
+  }
+
+  .footer-brand-col {
+    max-width: 100%;
+  }
+  
+  .footer-description {
+    text-align: left;
   }
   
   .social-icons {
-    justify-content: center;
+    justify-content: flex-start;  /* was center */
   }
   
   .footer-list {
-    display: inline-flex;
+    display: flex;              /* was inline-flex */
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;    /* was center */
+    text-align: left;
   }
 
   .footer-list.with-icons {
     align-items: flex-start;
     text-align: left;
     max-width: 320px;
-    margin: 0 auto;
+    margin: 0;                  /* was 0 auto — auto was re-centering the block */
   }
 
   .footer-list.with-icons li {
     justify-content: flex-start;
-  }
-}
-
-@media (max-width: 480px) {
-  .footer-section {
-    padding-top: 38px;
-  }
-
-  .footer-title {
-    font-size: 1.05rem;
-    margin-bottom: 14px;
-  }
-
-  .footer-list li {
-    font-size: 0.86rem;
-    margin-bottom: 10px;
-  }
-
-  .social-icons {
-    gap: 10px;
-  }
-
-  .social-icons a {
-    width: 36px;
-    height: 36px;
-  }
-
-  .footer-container {
-    padding-bottom: 38px;
-  }
-
-  .footer-bottom {
-    padding: 15px 14px;
-  }
-
-  .footer-bottom p {
-    font-size: 0.8rem;
   }
 }

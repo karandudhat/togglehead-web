@@ -5,29 +5,38 @@
   margin: 0 auto;
   overflow: hidden;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* section ko center align kiya */
 }
 
 .slider-container {
   overflow: hidden;
+  width: 100%;
+  padding: 10px 0; /* hover par card upar uthta hai, isse clip nahi hoga */
+  box-sizing: border-box;
 }
 
 .slider-track {
   display: flex;
+  align-items: stretch; /* sabhi cards ki height equal rahegi */
   gap: 20px;
 }
 
 .exam-card {
-  /* For desktop (3 cards visible) */
-  flex: 0 0 calc(33.333% - 13.333px); /* 100 / 3 = 33.333% */
-  height: 235px; /* Perfect rectangular ratio */
-  background-color: #13406F; /* Primary Dark Blue from screenshot */
-  border-radius: 20px; /* Generous rounded corners */
+  flex: 0 0 calc(33.333% - 13.333px);
+  height: 235px;
+  background-color: #13406F;
+  border-radius: 19px;
   padding: 35px 30px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start; /* content top se start, footer neeche auto-margin se */
+  align-items: flex-start; /* text left-aligned consistent */
+  text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-sizing: border-box;
 }
@@ -36,8 +45,6 @@
   transform: translateY(-5px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
-
-/* Faint mesh/honeycomb-like repeating watermark background */
 
 .card-mesh-bg {
   position: absolute;
@@ -53,14 +60,12 @@
   z-index: 0;
 }
 
-/* Card title styles */
-
 .card-title {
   color: #FFFFFF;
   font-size: 1.5rem;
   font-weight: 700;
-  margin-top: 0;
-  margin-bottom: 15px;
+  margin: 0 0 15px 0;
+  width: 100%;
   z-index: 2;
 }
 
@@ -69,14 +74,18 @@
   font-size: 1rem;
   line-height: 1.5;
   font-weight: 400;
-  margin-bottom: 30px;
+  margin: 0 0 30px 0;
   flex-grow: 1;
+  width: 100%;
   z-index: 2;
 }
 
 .card-footer {
   margin-top: auto;
+  width: 100%;
   z-index: 2;
+  display: flex;
+  align-items: center; /* button aur icon horizontally centered align */
 }
 
 .card-know-more {
@@ -104,7 +113,7 @@
   justify-content: center;
   width: 28px;
   height: 28px;
-  border-radius: 50%;
+  border-radius: 19px;
   background-color: #FFFFFF;
   flex-shrink: 0;
   transition: transform 0.25s ease;
@@ -117,12 +126,13 @@
 .card-know-more-icon svg {
   width: 12px;
   height: 12px;
+  display: block; /* icon ko exact center me align karta hai */
 }
 
 /* Tablet: 2 cards visible */
 @media screen and (max-width: 1024px) {
   .exam-card {
-    flex: 0 0 calc(50% - 10px); /* 100 / 2 = 50% */
+    flex: 0 0 calc(50% - 10px);
     height: 235px;
   }
 }
@@ -138,11 +148,11 @@
   }
 
   .exam-card {
-    flex: 0 0 100%; /* 100 / 1 = 100% */
+    flex: 0 0 100%;
     height: auto;
     min-height: 200px;
     padding: 24px 18px;
-    border-radius: 8px;
+    border-radius: 19px;
   }
 
   .card-title {
@@ -170,14 +180,16 @@
 .exam-slider-dots {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 10px;
   margin-top: 30px;
+  width: 100%;
 }
 
 .exam-dot {
   width: 10px;
   height: 10px;
-  border-radius: 50%;
+  border-radius: 19px;
   border: 2px solid #13406F;
   background-color: transparent;
   cursor: pointer;

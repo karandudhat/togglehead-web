@@ -11,6 +11,13 @@ const Footer = () => {
         aria-hidden="true"
       />
       <div className="footer-container">
+        <div className="footer-col footer-brand-col">
+          <h4 className="footer-title">ToggleHead</h4>
+          <p className="footer-description">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+          </p>
+        </div>
+        
         <div className="footer-col">
           <h4 className="footer-title">Contact us</h4>
           <ul className="footer-list">

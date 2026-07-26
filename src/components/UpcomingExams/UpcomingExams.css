@@ -19,7 +19,7 @@
 
 .upcoming-exams-title {
   font-family: 'Playfair Display', serif;
-  font-style: italic;
+  /* font-style: italic; */
   font-size: 2.5rem;
   color: #13406F;
   margin-bottom: 10px;
@@ -47,14 +47,32 @@
   gap: 20px;
 }
 
+/* Entry now icon-left, text-right (row layout instead of column) */
 .exam-entry {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Icon wrapper — no background circle now, just bigger icon */
+.exam-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .exam-icon svg {
   color: #13406F;
+  width: 56px;
+  height: 56px;
+}
+
+.exam-details {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
 .exam-date {
@@ -86,7 +104,6 @@
     width: 100%;
   }
 
-  /* Hide the vertical divider once the layout stacks vertically */
   .upcoming-exams-divider {
     display: none;
   }
@@ -107,9 +124,14 @@
   }
 
   .exam-entry {
+    flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 12px;
+  }
+
+  .exam-details {
+    text-align: center;
   }
 
   .exam-date {
@@ -144,7 +166,7 @@
 
   .exam-entry {
     display: grid;
-    grid-template-columns: 46px 1fr;
+    grid-template-columns: 52px 1fr;
     align-items: center;
     text-align: left;
     gap: 14px;
@@ -156,9 +178,13 @@
     box-shadow: 0 8px 20px rgba(19, 64, 111, 0.06);
   }
 
+  .exam-details {
+    text-align: left;
+  }
+
   .exam-icon svg {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
   }
 
   .exam-date {
