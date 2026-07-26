@@ -89,11 +89,6 @@
 
 /* =========================================================
    SUBMENU — DESKTOP ONLY (hover dropdown)
-   Scoped strictly to min-width: 993px so none of this — the
-   opacity:0/visibility:hidden default hidden state, the
-   absolute positioning, the light dropdown colors — can ever
-   apply on mobile/tablet. Mobile has its own fully separate
-   rules further below (inside max-width: 992px).
    ========================================================= */
 @media (min-width: 993px) {
   .has-submenu:hover > a .nav-arrow,
@@ -255,14 +250,17 @@
 }
 
 /* =========================================================
-   SEARCH DROPDOWN / OVERLAY — improved UI
+   SEARCH DROPDOWN / OVERLAY
+   Background now derived from the same primary navy as the
+   header/menu bar, just a touch darker — so it reads as part
+   of the same surface instead of a mismatched panel.
    ========================================================= */
 .search-overlay {
   position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
-  background-color: rgba(15, 27, 48, 0.98);
+  background-color: color-mix(in srgb, var(--primary-color, #13406F) 88%, #000000 12%);
   backdrop-filter: blur(12px);
   max-height: 0;
   overflow: hidden;
@@ -273,7 +271,7 @@
 
 .search-overlay.open {
   max-height: 480px;
-  border-bottom: 2px solid var(--primary-color, #13406F);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .search-bar-container {
@@ -469,7 +467,7 @@
     height: auto;
     max-height: calc(100vh - 64px);
     overflow-y: auto;
-    background-color: #13406F;
+    background-color: var(--primary-color, #13406F);
     flex-direction: column;
     justify-content: flex-start;
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
@@ -579,19 +577,24 @@
     opacity: 0.9;
   }
 
+  /* ---- SUBMENU (mobile drawer) — flat, no box ----
+     Previously this rendered as a bordered/filled "card" sitting
+     inside the drawer. Now it's just an indented, borderless list
+     that reads as part of the same drawer surface, separated only
+     by a thin left guide-line and generous row spacing. */
   .submenu-wrapper {
     max-height: 0;
     overflow: hidden;
-    margin: 0 18px 0 60px;
+    margin: 0 22px 0 60px;
+    padding-left: 14px;
+    border-left: 1px solid rgba(255, 255, 255, 0.14);
     pointer-events: none;
     transition: max-height 0.35s ease, margin-bottom 0.3s ease;
   }
 
   .has-submenu.submenu-open > .submenu-wrapper {
-    /* Generous cap — comfortably bigger than any realistic
-       submenu, so real content is never clipped. */
     max-height: 500px;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     pointer-events: auto;
   }
 
@@ -600,12 +603,12 @@
     min-width: 0;
     width: auto;
     list-style: none;
-    background: rgba(255, 255, 255, 0.07);
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    border-radius: 10px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
     box-shadow: none;
     transform: none;
-    padding: 6px;
+    padding: 4px 0;
     margin: 0;
     opacity: 1;
     visibility: visible;
@@ -622,22 +625,23 @@
   }
 
   .submenu li + li {
-    margin-top: 2px;
+    margin-top: 0;
   }
 
   .submenu a {
     display: block;
-    color: rgba(255, 255, 255, 0.82);
-    padding: 10px 14px;
+    color: rgba(255, 255, 255, 0.68);
+    padding: 10px 6px;
     white-space: normal;
-    border-radius: 6px;
+    border-radius: 0;
     text-decoration: none;
     font-size: 0.9rem;
+    transition: color 0.16s ease;
   }
 
   .submenu a:hover,
   .submenu a:focus {
-    background-color: rgba(255, 255, 255, 0.12);
+    background-color: transparent;
     color: #FFFFFF;
   }
 

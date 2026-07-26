@@ -38,10 +38,10 @@
 
 .faq-question {
   font-size: 1.1rem;
-  font-weight: 500;
-  color: #333;
+  font-weight: 400;
+  color: #4a4a4a;
   margin: 0;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, font-weight 0.3s ease;
 }
 
 .faq-item.open .faq-question {
@@ -67,4 +67,5 @@
   color: #666;
   line-height: 1.6;
   margin: 0;
+  font-weight: 400;
 }

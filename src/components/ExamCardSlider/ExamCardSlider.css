@@ -29,7 +29,6 @@
   background-color: #13406F;
   border-radius: 19px;
   padding: 35px 30px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -37,13 +36,7 @@
   justify-content: flex-start; /* content top se start, footer neeche auto-margin se */
   align-items: flex-start; /* text left-aligned consistent */
   text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-sizing: border-box;
-}
-
-.exam-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
 .card-mesh-bg {
@@ -150,7 +143,7 @@
   .exam-card {
     flex: 0 0 100%;
     height: auto;
-    min-height: 200px;
+    min-height: 170px;
     padding: 24px 18px;
     border-radius: 19px;
   }
