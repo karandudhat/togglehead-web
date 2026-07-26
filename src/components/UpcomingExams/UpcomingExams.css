@@ -1,0 +1,172 @@
+.upcoming-exams-section {
+  padding: 56px 20px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.upcoming-exams-container {
+  max-width: 1454px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.upcoming-exams-left {
+  flex: 0 0 40%;
+}
+
+.upcoming-exams-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 2.5rem;
+  color: #13406F;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.upcoming-exams-subtitle {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Vertical divider between the title block and the exam entries */
+.upcoming-exams-divider {
+  width: 1px;
+  align-self: stretch;
+  background-color: rgba(19, 64, 111, 0.18);
+  flex-shrink: 0;
+}
+
+.upcoming-exams-right {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.exam-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.exam-icon svg {
+  color: #13406F;
+}
+
+.exam-date {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.exam-level {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+@media (max-width: 900px) {
+  .upcoming-exams-section {
+    padding: 48px 20px;
+  }
+
+  .upcoming-exams-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 28px;
+  }
+
+  .upcoming-exams-left {
+    flex: none;
+    width: 100%;
+  }
+
+  /* Hide the vertical divider once the layout stacks vertically */
+  .upcoming-exams-divider {
+    display: none;
+  }
+
+  .upcoming-exams-title {
+    font-size: 2.15rem;
+    line-height: 1.15;
+  }
+
+  .upcoming-exams-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .upcoming-exams-right {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    width: 100%;
+  }
+
+  .exam-entry {
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .exam-date {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .upcoming-exams-section {
+    padding: 42px 16px;
+  }
+
+  .upcoming-exams-container {
+    gap: 24px;
+  }
+
+  .upcoming-exams-title {
+    font-size: 1.72rem;
+    margin-bottom: 8px;
+  }
+
+  .upcoming-exams-subtitle {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .upcoming-exams-right {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 380px;
+  }
+
+  .exam-entry {
+    display: grid;
+    grid-template-columns: 46px 1fr;
+    align-items: center;
+    text-align: left;
+    gap: 14px;
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid rgba(19, 64, 111, 0.1);
+    border-radius: 8px;
+    background: #FFFFFF;
+    box-shadow: 0 8px 20px rgba(19, 64, 111, 0.06);
+  }
+
+  .exam-icon svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .exam-date {
+    font-size: 0.98rem;
+    line-height: 1.25;
+  }
+
+  .exam-level {
+    font-size: 0.86rem;
+  }
+}

@@ -1,0 +1,191 @@
+.exam-card-slider-section {
+  padding: 60px 20px;
+  width: 100%;
+  max-width: 1454px;
+  margin: 0 auto;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.slider-container {
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  gap: 20px;
+}
+
+.exam-card {
+  /* For desktop (3 cards visible) */
+  flex: 0 0 calc(33.333% - 13.333px); /* 100 / 3 = 33.333% */
+  height: 235px; /* Perfect rectangular ratio */
+  background-color: #13406F; /* Primary Dark Blue from screenshot */
+  border-radius: 20px; /* Generous rounded corners */
+  padding: 35px 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.exam-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Faint mesh/honeycomb-like repeating watermark background */
+
+.card-mesh-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.08;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Card title styles */
+
+.card-title {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 15px;
+  z-index: 2;
+}
+
+.card-description {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-bottom: 30px;
+  flex-grow: 1;
+  z-index: 2;
+}
+
+.card-footer {
+  margin-top: auto;
+  z-index: 2;
+}
+
+.card-know-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #FFFFFF;
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: gap 0.25s ease;
+}
+
+.card-know-more:hover {
+  gap: 16px;
+}
+
+.card-know-more-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.card-know-more:hover .card-know-more-icon {
+  transform: translateX(2px);
+}
+
+.card-know-more-icon svg {
+  width: 12px;
+  height: 12px;
+}
+
+/* Tablet: 2 cards visible */
+@media screen and (max-width: 1024px) {
+  .exam-card {
+    flex: 0 0 calc(50% - 10px); /* 100 / 2 = 50% */
+    height: 235px;
+  }
+}
+
+/* Mobile: 1 card visible */
+@media screen and (max-width: 768px) {
+  .exam-card-slider-section {
+    padding: 42px 16px;
+  }
+
+  .slider-track {
+    gap: 14px;
+  }
+
+  .exam-card {
+    flex: 0 0 100%; /* 100 / 1 = 100% */
+    height: auto;
+    min-height: 200px;
+    padding: 24px 18px;
+    border-radius: 8px;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+
+  .card-description {
+    font-size: 0.9rem;
+    line-height: 1.45;
+    margin-bottom: 20px;
+  }
+
+  .card-know-more {
+    font-size: 0.88rem;
+  }
+
+  .card-know-more-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Pagination Dots for Card Slider */
+.exam-slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.exam-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #13406F;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.exam-dot.active {
+  background-color: #13406F;
+  transform: scale(1.2);
+}

@@ -1,0 +1,93 @@
+.statistics-section {
+  background-color: #F6F6F6;
+  padding: 80px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.statistics-container {
+  max-width: 1454px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-label {
+  color: #13406F;
+  font-size: 1.1rem;
+  font-weight: 400;   /* was 500 — design ma regular weight che */
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  color: #13406F;
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.stat-subtitle {
+  color: #13406F;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 10px 0 15px 0;
+}
+
+.stat-description {
+  color: #4F6B85;   
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+@media screen and (max-width: 1024px) {
+  .statistics-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .stat-value {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .statistics-section {
+    padding: 44px 16px;
+  }
+  .statistics-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px 18px;
+  }
+  .stat-card {
+    align-items: center;
+    text-align: center;
+  }
+  .stat-value {
+    font-size: 2.6rem;
+  }
+  .stat-subtitle {
+    font-size: 1.05rem;
+    margin: 6px 0 10px;
+  }
+  .stat-label,
+  .stat-description {
+    font-size: 0.88rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .statistics-container {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .stat-value {
+    font-size: 2.8rem;
+  }
+}
