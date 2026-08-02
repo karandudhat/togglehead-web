@@ -26,7 +26,10 @@
 .exam-card {
   flex: 0 0 calc(33.333% - 13.333px);
   height: 235px;
-  background-color: #13406F;
+  background-image: url('./Group 9195.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 19px;
   padding: 35px 30px;
   position: relative;
@@ -40,34 +43,26 @@
 }
 
 .card-mesh-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.08;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  pointer-events: none;
-  z-index: 0;
+  display: none;
 }
 
 .card-title {
   color: #FFFFFF;
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin: 0 0 15px 0;
+  font-family: 'FSAlbert', 'Inter', sans-serif;
+  font-size: 19px;
+  font-weight: bold;
+  margin: 0 0 12px 0;
   width: 100%;
   z-index: 2;
 }
 
 .card-description {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 1rem;
-  line-height: 1.5;
-  font-weight: 400;
-  margin: 0 0 30px 0;
+  color: #FFFFFF;
+  font-family: 'FSAlbert', 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+  margin: 0 0 20px 0;
   flex-grow: 1;
   width: 100%;
   z-index: 2;
@@ -89,9 +84,9 @@
   background: transparent;
   border: none;
   padding: 0;
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 0.95rem;
+  font-family: 'FSAlbert', 'Inter', sans-serif;
+  font-weight: normal;
+  font-size: 16px;
   cursor: pointer;
   transition: gap 0.25s ease;
 }
@@ -100,26 +95,16 @@
   gap: 16px;
 }
 
-.card-know-more-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.card-know-more-img {
   width: 28px;
   height: 28px;
-  border-radius: 19px;
-  background-color: #FFFFFF;
+  display: block;
   flex-shrink: 0;
   transition: transform 0.25s ease;
 }
 
-.card-know-more:hover .card-know-more-icon {
-  transform: translateX(2px);
-}
-
-.card-know-more-icon svg {
-  width: 12px;
-  height: 12px;
-  display: block; /* icon ko exact center me align karta hai */
+.card-know-more:hover .card-know-more-img {
+  transform: translateX(4px);
 }
 
 /* Tablet: 2 cards visible */

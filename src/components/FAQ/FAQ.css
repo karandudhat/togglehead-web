@@ -11,12 +11,14 @@
 }
 
 .faq-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'FSAlbert', 'Inter', sans-serif;
   text-align: center;
   color: #13406F;
-  font-size: 2.5rem;
+  font-size: 30px;
+  line-height: 50px;
   margin-bottom: 40px;
-  font-weight: 700;
+  font-weight: bold;
+  letter-spacing: 0.46px;
 }
 
 .faq-list {
@@ -26,7 +28,7 @@
 
 .faq-item {
   border-bottom: 1px solid #e0e0e0;
-  padding: 20px 0;
+  padding: 24px 0;
 }
 
 .faq-header {
@@ -37,16 +39,17 @@
 }
 
 .faq-question {
-  font-size: 1.1rem;
-  font-weight: 400;
-  color: #4a4a4a;
+  font-family: 'FSAlbert', 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  color: #525252;
   margin: 0;
   transition: color 0.3s ease, font-weight 0.3s ease;
 }
 
 .faq-item.open .faq-question {
   color: #13406F;
-  font-weight: 600;
+  font-weight: normal;
 }
 
 .faq-icon {
@@ -57,15 +60,24 @@
   justify-content: center;
 }
 
+.faq-collapse-icon,
+.faq-expand-icon {
+  width: 26px;
+  height: 26px;
+  display: block;
+}
+
 .faq-answer-container {
   overflow: hidden;
   transition: max-height 0.4s ease-in-out;
 }
 
 .faq-answer {
-  padding-top: 15px;
-  color: #666;
-  line-height: 1.6;
+  padding: 16px 0 12px 0;
+  font-family: 'FSAlbert', 'Inter', sans-serif;
+  color: #525252;
+  font-size: 15px;
+  line-height: 22px;
   margin: 0;
-  font-weight: 400;
+  font-weight: normal;
 }

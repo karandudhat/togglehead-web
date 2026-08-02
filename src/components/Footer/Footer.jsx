@@ -4,19 +4,7 @@ import './Footer.css';
 const Footer = () => {
   return (
     <footer className="footer-section">
-      <img
-        src={`${process.env.PUBLIC_URL}/footer-image.png`}
-        alt=""
-        className="footer-bg-image"
-        aria-hidden="true"
-      />
       <div className="footer-container">
-        <div className="footer-col footer-brand-col">
-          <h4 className="footer-title">ToggleHead</h4>
-          <p className="footer-description">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-          </p>
-        </div>
         
         <div className="footer-col">
           <h4 className="footer-title">Contact us</h4>
@@ -30,12 +18,12 @@ const Footer = () => {
         <div className="footer-col">
           <h4 className="footer-title">Follow us</h4>
           <div className="social-icons">
-            <a href="#fb"><i className="fa-brands fa-facebook-f"></i></a>
-            <a href="#in"><i className="fa-brands fa-linkedin-in"></i></a>
-            <a href="#ig"><i className="fa-brands fa-instagram"></i></a>
-            <a href="#tw"><i className="fa-brands fa-twitter"></i></a>
-            <a href="#yt"><i className="fa-brands fa-youtube"></i></a>
-            <a href="#qu"><i className="fa-brands fa-quora"></i></a>
+            <a href="#fb"><img src="/footer-icons/Icon awesome-facebook-f.png" alt="Facebook" className="social-icon-img" /></a>
+            <a href="#in"><img src="/footer-icons/Icon awesome-linkedin.png" alt="LinkedIn" className="social-icon-img" /></a>
+            <a href="#ig"><img src="/footer-icons/Icon awesome-instagram.png" alt="Instagram" className="social-icon-img" /></a>
+            <a href="#tw"><img src="/footer-icons/Icon awesome-twitter.png" alt="Twitter" className="social-icon-img" /></a>
+            <a href="#yt"><i className="fa-brands fa-youtube social-icon-fa"></i></a>
+            <a href="#qu"><img src="/footer-icons/quora.png" alt="Quora" className="social-icon-img" /></a>
           </div>
         </div>
         
@@ -43,20 +31,20 @@ const Footer = () => {
           <h4 className="footer-title">Head Office</h4>
           <ul className="footer-list with-icons">
             <li>
-              <i className="fa-solid fa-location-dot"></i>
+              <img src="/footer-icons/Icon material-location-on.png" alt="Location" className="footer-icon-img" />
               <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</span>
             </li>
             <li>
-              <i className="fa-solid fa-clock"></i>
+              <img src="/footer-icons/Group 17190.png" alt="Clock" className="footer-icon-img" />
               <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</span>
             </li>
             <li>
-              <i className="fa-solid fa-clock"></i>
+              <img src="/footer-icons/Group 17190.png" alt="Clock" className="footer-icon-img" />
               <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</span>
             </li>
             <li>
-              <i className="fa-solid fa-train"></i>
-              <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</span>
+              <img src="/footer-icons/Group 17156.png" alt="Train" className="footer-icon-img" />
+              <span>Lorem ipsum asd asdsaweeq Lorem Ipsum</span>
             </li>
           </ul>
         </div>

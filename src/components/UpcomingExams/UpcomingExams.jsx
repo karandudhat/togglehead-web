@@ -6,15 +6,18 @@ const UpcomingExams = () => {
   const exams = [
     {
       date: '02th October 2014',
-      level: 'Level 1 exam'
+      level: 'Level 1 exam',
+      subitems: []
     },
     {
       date: 'Nov-Dec 2016',
-      level: 'Level 2 / Lorem Ipsum / Lorem Ipsum'
+      level: 'Level 2',
+      subitems: ['Lorem Ipsum', 'Lorem Ipsum']
     },
     {
       date: 'Ongoing this year',
-      level: 'Level 3 (Grad)'
+      level: 'Level 3 (Grad)',
+      subitems: []
     }
   ];
 
@@ -30,21 +33,30 @@ const UpcomingExams = () => {
 
         <div className="upcoming-exams-right">
           {exams.map((exam, index) => (
-            <div className="exam-entry" key={index}>
-              <div className="exam-icon">
-                <svg width="56" height="56" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M26 14H14C12.8954 14 12 14.8954 12 16V26C12 27.1046 12.8954 28 14 28H26C27.1046 28 28 27.1046 28 26V16C28 14.8954 27.1046 14 26 14Z" stroke="#13406F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M22 12V16" stroke="#13406F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M18 12V16" stroke="#13406F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M12 20H28" stroke="#13406F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M16 24H16.01" stroke="#13406F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+            <React.Fragment key={index}>
+              <div className="exam-entry">
+                <div className="exam-icon">
+                  <img src="/Group 2645.svg" alt="Calendar" className="exam-calendar-icon" />
+                  <img src="/Group 2647.svg" alt="Clock Hands" className="exam-clock-hands" />
+                </div>
+                <div className="exam-details">
+                  <h3 className="exam-date">{exam.date}</h3>
+                  <div className="exam-level">{exam.level}</div>
+                  {exam.subitems.length > 0 && (
+                    <div className="exam-subitems">
+                      {exam.subitems.map((sub, sIdx) => (
+                        <div className="exam-subitem" key={sIdx}>
+                          <span className="exam-subitem-text">{sub}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </div>
-              <div className="exam-details">
-                <h3 className="exam-date">{exam.date}</h3>
-                <p className="exam-level">{exam.level}</p>
-              </div>
-            </div>
+              {index < exams.length - 1 && (
+                <div className="exam-column-divider"></div>
+              )}
+            </React.Fragment>
           ))}
         </div>
       </div>

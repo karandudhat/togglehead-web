@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'FSAlbert';
+  src: url('./font/FSAlbert Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FSAlbert';
+  src: url('./font/FSAlbBol.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
@@ -18,7 +32,7 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'FSAlbert', 'Inter', sans-serif;
   color: #2D3A4A;
   background-color: #FFFFFF;
   line-height: 1.6;
@@ -40,7 +54,7 @@ ul {
 
 button {
   cursor: pointer;
-  font-family: 'Inter', sans-serif;
+  font-family: 'FSAlbert', 'Inter', sans-serif;
   border: none;
   outline: none;
   background: none;

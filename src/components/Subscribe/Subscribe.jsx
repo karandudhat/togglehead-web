@@ -23,7 +23,7 @@ const Subscribe = () => {
         </div>
         <div className="subscribe-right">
           <img 
-            src={process.env.PUBLIC_URL + '/mobilr-image.png'} 
+            src={process.env.PUBLIC_URL + '/Mask Group 72.svg'} 
             alt="Subscribe illustration" 
             className="subscribe-img" 
           />

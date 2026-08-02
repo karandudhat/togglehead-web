@@ -31,8 +31,9 @@
 
 .header-logo a {
   color: #FFFFFF;
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 25px;
+  font-weight: bold;
   text-decoration: none;
   letter-spacing: 1px;
 }
@@ -59,8 +60,9 @@
 .nav-item > a {
   color: #FFFFFF;
   text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 400;
+  font-family: 'FSAlbert', 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -69,7 +71,7 @@
 }
 
 .nav-item > a:hover {
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .chevron { font-size: 0.7rem; }
@@ -177,12 +179,17 @@
   background-color: #FFFFFF;
   color: var(--primary-color, #13406F);
   border: none;
-  border-radius: 6px;
-  padding: 10px 24px;
-  font-size: 0.95rem;
-  font-weight: 600;
+  border-radius: 8px;
+  width: 127px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'FSAlbert', 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .enrolment-btn:hover {

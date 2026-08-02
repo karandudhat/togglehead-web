@@ -1,29 +1,20 @@
 .footer-section {
-  background-color: var(--primary-color, #13406F);
+  background-image: url('./Group 17432@2x.png');
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
   color: #fff;
   padding: 70px 20px 0;
   position: relative;
   overflow: hidden;
-}
-
-.footer-bg-image {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: min(1120px, 128vw);
-  max-width: none;
-  transform: translate(-50%, 62%);
-  opacity: 0.34;
-  pointer-events: none;
-  z-index: 0;
-  filter: saturate(0.9);
+  font-family: 'FSAlbert', 'Inter', sans-serif;
 }
 
 .footer-container {
   max-width: 1454px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   padding-bottom: 70px;
   position: relative;
@@ -36,10 +27,12 @@
 }
 
 .footer-title {
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-family: 'FSAlbert', 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: #FFFFFF;
   margin-bottom: 20px;
-  text-transform: capitalize;
+  text-transform: none;
 }
 
 .footer-list {
@@ -49,10 +42,12 @@
 }
 
 .footer-list li {
-  color: #bbb;
+  color: #FFFFFF;
   margin-bottom: 15px;
-  line-height: 1.5;
-  font-size: 0.95rem;
+  line-height: 24px;
+  font-size: 14px;
+  font-family: 'FSAlbert', 'Inter', sans-serif;
+  font-weight: normal;
 }
 
 .footer-list.with-icons li {
@@ -61,9 +56,12 @@
   gap: 15px;
 }
 
-.footer-list.with-icons i {
+.footer-icon-img {
+  width: 16px;
+  height: auto;
+  object-fit: contain;
   margin-top: 4px;
-  color: #bbb;
+  flex-shrink: 0;
 }
 
 .footer-description {
@@ -79,27 +77,33 @@
 
 .social-icons {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .social-icons a {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: transparent;
-  border: 1px solid #fff;
-  border-radius: 50%;
-  color: #fff;
-  text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;
+  transition: transform 0.2s ease;
 }
 
 .social-icons a:hover {
-  background-color: #fff;
-  color: var(--primary-color, #13406F);
+  transform: translateY(-3px);
+}
+
+.social-icon-img {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.social-icon-fa {
+  font-size: 28px;
+  color: #FFFFFF;
+  display: block;
 }
 
 .footer-bottom {

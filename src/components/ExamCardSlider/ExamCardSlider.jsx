@@ -204,11 +204,7 @@ const ExamCardSlider = () => {
               <div className="card-footer">
                 <button className="card-know-more">
                   <span>Know More</span>
-                  <span className="card-know-more-icon">
-                    <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M4.5 2.5L8 6L4.5 9.5" stroke="#13406F" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </span>
+                  <img src="/Group 9275.svg" alt="Arrow" className="card-know-more-img" />
                 </button>
               </div>
             </div>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './FAQ.css';
 
 const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState(1);
 
   const faqs = [
     {
@@ -36,15 +36,9 @@ const FAQ = () => {
                   <h3 className="faq-question">{faq.question}</h3>
                   <div className="faq-icon">
                     {isOpen ? (
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="12" cy="12" r="12" fill="#0F2341"/>
-                        <path d="M6 12H18" stroke="white" strokeWidth="2" strokeLinecap="round"/>
-                      </svg>
+                      <img src="/do_not_disturb_on_FILL1_wght100_GRAD200_opsz24.svg" alt="Collapse" className="faq-collapse-icon" />
                     ) : (
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="12" cy="12" r="11" stroke="#333" strokeWidth="2"/>
-                        <path d="M12 6V18M6 12H18" stroke="#333" strokeWidth="2" strokeLinecap="round"/>
-                      </svg>
+                      <img src="/add_circle_FILL0_wght300_GRAD-25_opsz48.svg" alt="Expand" className="faq-expand-icon" />
                     )}
                   </div>
                 </div>
