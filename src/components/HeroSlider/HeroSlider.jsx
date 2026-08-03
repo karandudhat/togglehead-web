@@ -26,7 +26,6 @@ const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
-  const sliderRef = useRef(null);
 
   const [isMouseDown, setIsMouseDown] = useState(false);
   const [dragStartX, setDragStartX] = useState(0);
@@ -83,10 +82,10 @@ const HeroSlider = () => {
     setIsMouseDown(false);
   };
 
+
   return (
     <section
       className="hero-section"
-      ref={sliderRef}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -97,7 +96,7 @@ const HeroSlider = () => {
       style={{ cursor: isMouseDown ? 'grabbing' : 'grab' }}
       aria-label="Hero Slider"
     >
-          {/* LEFT side – gray background, text content */}
+    
       <div className="hero-left">
         <div className="hero-text-wrapper">
           {slides.map((slide, idx) => (
@@ -115,8 +114,7 @@ const HeroSlider = () => {
         </div>
       </div>
 
-          {/* RIGHT side – blue gradient + actual image */}
-          
+      {/* RIGHT side –  actual image */}
       <div className="hero-right">
         {/* slide images */}
         {slides.map((slide, idx) => (
